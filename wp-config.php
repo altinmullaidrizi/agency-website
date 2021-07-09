@@ -18,17 +18,14 @@
  * @package WordPress
  */
 
-if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
-    $db = parse_url($_ENV[`CLEARDB_DATABASE_URL`]);
-    define(‘DB_NAME’, trim($db[`path`],`/`));
-    define(‘DB_USER’, $db[`user`]);
-    define(‘DB_PASSWORD’, $db[`pass`]);
-    define(‘DB_HOST’, $db[`host`]);
-    define(‘DB_CHARSET’, ‘utf8’);
-    define(‘DB_COLLATE’, ‘’);
-} else {
-    die(‘No Database credentials!’);
-}
+
+
+define('DB_NAME', 'heroku_ca5e70d09810e69');
+    define('DB_USER', 'bdf404bf020150');
+    define('DB_PASSWORD', 'd5650daa');
+    define('DB_HOST', 'us-cdbr-east-04.cleardb.com');
+    define('DB_CHARSET', 'utf8');
+    define('DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -39,14 +36,14 @@ if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         getenv('AUTH_KEY'));
-define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY'));
-define('LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY'));
-define('NONCE_KEY',        getenv('NONCE_KEY'));
-define('AUTH_SALT',        getenv('AUTH_SALT'));
-define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
-define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
-define('NONCE_SALT',       getenv('NONCE_SALT'));
+define('AUTH_KEY',         '6-d:zr3fXX/[.[4rOD]z.Cg`<_Z-L]+ F-CtDob4unKkq<k{m|aai:1R,ZsW<`R-');
+define('SECURE_AUTH_KEY',  '@AR0]G1xpr$@oA+V^-aW8Hs)F+X^{=.&pRjMbv{-[$`fFB1x,-l|Y&oO!)h^m1,C');
+define('LOGGED_IN_KEY',    'Ma&Vx!*P@:CJ-DiSG`u2 }UgeE7KjRxv<|NF,U&%nKjYL1R:a2a6]gKcli*SZU)u');
+define('NONCE_KEY',        'W|>a<ua7Bn@p,m2c|MGqPJALA$l}|^c<}CoS%|qNsRy4+AGY=|l[+ArMgb}Np-J|');
+define('AUTH_SALT',        '(!+]?Nc1-b^Su(9+#d]j<Z+$1$SdD_X$b5~N|L 6]]q(5!H!*[~ZBJ$7BC)yrSvw');
+define('SECURE_AUTH_SALT', '$={Q^`k{uo+r}m+I#Ienif828L>G|MBy_<HogYaq rrw|f9iSN:p9M1]T,%(!VfY');
+define('LOGGED_IN_SALT',   'zn]6Yc#J/9A3*9r3P;cvj`~j]89iKQPV0iPR(xWPL}$qB!*8 WFbz,hsp<CQo70N');
+define('NONCE_SALT',       '+322]Cv1qLGf^{6N51]-sv>;a0uiMo!1b2Y&[!d8gN[[d_V2(|j]N+jr/ _Tv(jF');
 
 /**#@-*/
 
